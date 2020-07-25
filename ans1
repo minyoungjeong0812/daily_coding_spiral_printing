@@ -23,6 +23,6 @@ def print_spiral_order(mat):
             for x in mat.pop()[::-1]:
                 print(x)
                 
-        ## Get the first element from the last nested lists still remaining in the mat array ##        
+        ## Get the first elements from the last nested lists (in a reverse order; bottom to top) still remaining in the mat array ##        
         for v in mat[::-1]:
             print(v.pop(0))
