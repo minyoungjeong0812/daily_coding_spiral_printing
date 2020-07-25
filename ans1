@@ -5,13 +5,24 @@ def print_spiral_order(mat):
     Returns:
         matrix printed in spiral order.
     """
+    
+    ### Run until the mat array gets empty ##
     while mat:
+        ## Get the first nested list and pop it ##
         for x in mat.pop(0):
             print(x)
+        
+        ## Iterate over the next nested lists and pop/print the last element out of the nested list ##
         for v in mat:
             print(v.pop())
+        
+        ## If mat is still not empty ##
         if mat:
+        
+            ## Iterate over the elements in the last nested lists but in a reverse manner ##
             for x in mat.pop()[::-1]:
                 print(x)
+                
+        ## Get the first element from the last nested lists still remaining in the mat array ##        
         for v in mat[::-1]:
             print(v.pop(0))
